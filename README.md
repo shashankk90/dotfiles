@@ -74,7 +74,9 @@ Now reboot.
 Now run hyprland. The screen will be empty if you copied the config file.
 Use ``SUPER + Q`` to open a terminal.
 
-## The rest of it
+## greetd-tuigreet
+
+
 
 
 greetd and greetd-tuigreet
@@ -100,10 +102,3 @@ wofi
 wlogout
 bottom
 
-
-~ config files
-
-.config/hypr
-.config/kitty
-.config/waybar
-.config/wofi    = currently has nothing
