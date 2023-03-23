@@ -1,0 +1,71 @@
+base archinstall
+
+nano
+vim
+wget
+code
+firefox
+linux-headers
+nvidia
+
+
+ttf-jetbrains-mono-nerd
+
+yay-bin
+
+bluetooth stuff - blueman, bluez, bluez-utils
+blueman-applet
+network-manager-applet
+nm-connection-editor etcccc check arch bluetooth and network manager
+
+
+~ hyprrrrrrrrr
+
+hyprland-nvidia-git
+
+https://getcryst.al/site/docs/crystal-linux/nvidiawayland
+
+sudo nano /etc/mkinitcpio.conf 
+MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia_drm)
+sudo mkinitcpio -P
+sudo nano /etc/default/grub
+GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet nvidia_drm.modeset=1"
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+reboot
+
+
+put these in hyprland.conf
+env = LIBVA_DRIVER_NAME,nvidia
+env = XDG_SESSION_TYPE,wayland
+env = GBM_BACKEND,nvidia-drm
+env = __GLX_VENDOR_LIBRARY_NAME,nvidia
+env = WLR_NO_HARDWARE_CURSORS,1
+
+qt5-wayland
+qt6-wayland
+qt5ct
+libva
+yay -S nvidia-vaapi-driver-git 
+
+pipewire and wireplumber ( required for screenshare)
+
+hyprpaper-git
+hyprpicker-git
+
+kitty
+polkit-kde-agent
+
+waybar-git
+mako
+wofi
+
+wlogout
+bottom
+
+
+~ config files
+
+.config/hypr
+.config/kitty
+.config/waybar
+.config/wofi    = currently has nothing
