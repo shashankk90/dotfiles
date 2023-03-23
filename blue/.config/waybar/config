@@ -1,0 +1,122 @@
+{
+  "layer":"top",
+  "position": "top",
+  "modules-left": [
+    "custom/arch-pill",
+    "cpu",
+    "memory",
+    "battery"
+  ],
+  "modules-center": ["custom/playerctl"],
+  "modules-right": ["tray", "network","bluetooth", "backlight", "pulseaudio#audio","pulseaudio#microphone", "clock"],
+  // Modules configuration
+  // pulseaudio#microphone
+  "custom/arch-pill": {
+    "format": "",
+    "on-click": "wofi --show drun",
+    "on-click-right": "wlogout",
+    // on mid click maybe theme switch
+    "tooltip": false
+  },
+  "bluetooth": {
+    "format": " {status}",
+    "format-connected": " {device_alias}",
+    "format-connected-battery": " {device_alias} {device_battery_percentage}%",
+    "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+    "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+    "on-click" : "blueman-manager"
+  },
+
+  "clock": {
+    "format-alt": " {:%I:%M %p %a %d}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format": " {:%I:%M %p}"
+  },
+  "cpu": {
+    "format": " {usage}%",
+    "on-click" : "kitty btm"
+  },
+  "memory": {
+    "format": " {}%",
+    "on-click": "kitty btm"
+  },
+ 
+  "backlight": {
+    "format": "󰃟 {percent}0%",
+    "on-click": "brightnessctl --min-value=11 set +5",
+    "on-click-right":"brightnessctl --min-value=11 set 5-"
+  },
+  "battery": {
+    "states": {
+      "good": 95,
+      "warning": 70,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-icons": [" ", " ", " "],
+    "format-charging": "{capacity}%",
+    "format-plugged": " {capacity}%"
+  },
+  "network": {
+    "interface": "wlp0s20f3",
+    "format": "Loading",
+    "format-wifi": " {essid}({signalStrength}%)",
+    "format-ethernet": "{ipaddr}/{cidr}  ",
+    "format-disconnected": "󰌙 ",
+    "tooltip-format": "{ifname} via {gwaddr}  ",
+    "tooltip-format-wifi": "{essid}({signalStrength}%)  ",
+    "tooltip-format-ethernet": "{ifname}  ",
+    "tooltip-format-disconnected": "Disconnected",
+    "on-click" : "nm-connection-editor"
+  },
+  "pulseaudio#audio": {
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "󰂯{icon} {volume}%",
+    "format-bluetooth-muted": "󰗿 {volume}%",
+    "format-muted": "󰖁 {volume}%",
+    "format-icons": {
+      "headphone": "󰋋",
+      "hands-free": "󰋋",
+      "headset": "󰋋",
+      "phone": "",
+      "portable": "",
+      "car": " ",
+      "default": ["󰕿", "󰖀", "󰕾"]
+    },
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +1%",
+    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -1%",
+    "tooltip": true,
+    "tooltip-format": "{icon} {desc}"
+  },
+  "pulseaudio#microphone": {
+    "format": "{format_source}",
+    "format-source": "󰍬 {volume}%",
+    "format-source-muted": "󰍭 {volume}%",
+    "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+    "on-scroll-up": "pactl set-source-volume @DEFAULT_SOURCE@ +1%",
+    "on-scroll-down": "pactl set-source-volume @DEFAULT_SOURCE@ -1%",
+    "max-volume": 100,
+    "tooltip": false
+  },
+  "custom/playerctl": {
+    "format": "{icon}  <span>{}</span>",
+    "return-type": "json",
+    "max-length": 40,
+    "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} ~ {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+    "on-click-middle": "playerctl play-pause",
+    "on-click": "playerctl previous",
+    "on-click-right": "playerctl next",
+    "format-icons": {
+      "Playing": " ",
+      "Paused": " "
+    }
+  },
+  "tray": {
+    "icon-size": 20,
+    "reverse-direction": true,
+    "spacing": 6
+  }
+}
