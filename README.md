@@ -76,29 +76,15 @@ Use ``SUPER + Q`` to open a terminal.
 
 ## greetd-tuigreet
 
-
-
-
 greetd and greetd-tuigreet
 
 
-bluetooth stuff - blueman, bluez, bluez-utils
-blueman-applet
-network-manager-applet
-nm-connection-editor etcccc check arch bluetooth and network manager
+## blue
+Copy the config files from ``blue/.config``.
 
-pipewire and wireplumber ( required for screenshare)
-
-hyprpaper-git
-hyprpicker-git
-
-kitty
-polkit-kde-agent
-
-waybar-git
-mako
-wofi
-
-wlogout
-bottom
-
+Install the following:
+```
+sudo pacman -S network-manager-applet nm-connection-editor bluez bluez-utils blueman polkit-kde-agent mako wofi bottom
+yay -S waybar-git hyprpaper-git wlogout
+```
+Remember to enable bluetooth.
