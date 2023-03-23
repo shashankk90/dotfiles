@@ -74,10 +74,6 @@ Now reboot.
 Now run hyprland. The screen will be empty if you copied the config file.
 Use ``SUPER + Q`` to open a terminal.
 
-## greetd-tuigreet
-
-greetd and greetd-tuigreet
-
 
 ## blue
 Copy the config files from ``blue/.config``.
@@ -87,4 +83,17 @@ Install the following:
 sudo pacman -S network-manager-applet nm-connection-editor bluez bluez-utils blueman polkit-kde-agent mako wofi bottom
 yay -S waybar-git hyprpaper-git wlogout
 ```
-Remember to enable bluetooth.
+Enable bluetooth if its not enabled.
+
+## greetd-tuigreet
+
+```
+yay -S greetd greetd-tuigreet
+sudo systemctl enable greetd
+sudo chown :greeter /etc/greetd
+```
+Edit ``/etc/greetd/config.toml`` :
+```
+[default_session]
+command = "tuigreet --cmd hyprland"
+```
