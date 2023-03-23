@@ -90,7 +90,6 @@ Enable bluetooth if its not enabled.
 ```
 yay -S greetd greetd-tuigreet
 sudo systemctl enable greetd
-sudo chown :greeter /etc/greetd
 ```
 Edit ``/etc/greetd/config.toml`` :
 ```
