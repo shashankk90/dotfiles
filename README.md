@@ -4,7 +4,7 @@ mah dotfiles
 
 ## archinstall
 
-Enable parallel install in /etc/pacman.conf
+Enable parallel downloads in ``/etc/pacman.conf``
 
 ```
 rfkill unblock wifi
