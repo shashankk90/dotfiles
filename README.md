@@ -21,7 +21,7 @@ nmcli d wifi connect <AP> password <password>
 
 Install the following packages:
 ```
-sudo pacman -S nano vim firefox wget linux-headers code nvidia git ttf-jetbrains-mono-nerd kitty
+sudo pacman -S nano vim firefox wget linux-headers code nvidia git ttf-jetbrains-mono-nerd kitty man
 ```
 
 Install yay:
