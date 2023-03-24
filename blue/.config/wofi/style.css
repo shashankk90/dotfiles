@@ -1,0 +1,44 @@
+* {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  /*
+  color0  background
+  color1  background:selected
+  color2  text selected
+  color3  text
+  */
+  
+  #input {
+    border-radius: 10px;
+    background-color: --wofi-color0;
+    color: --wofi-color3;
+    margin: 0px 0px 10px 0px;
+    padding: 8px;
+    border: 1px solid --wofi-color3
+  }
+  
+  #scroll {
+    background-color: --wofi-color0;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  #entry {
+    margin: 0px;
+    padding: 16px;
+    color:--wofi-color3;
+  }
+  #text{
+    color: --wofi-color3;
+  }
+  
+  #entry:selected {
+    background-color: --wofi-color1;
+    color: --wofi-color2;
+    outline:none;
+    border-radius: 4px;
+  }
+  #text:selected {
+    color: --wofi-color2;
+  }
+  

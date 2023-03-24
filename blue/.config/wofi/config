@@ -1,0 +1,16 @@
+colors = colors
+mode = drun
+width = 600
+prompt = 
+normal_window = false
+hide_scroll = true
+matching = contains
+insensitive = true
+location = center
+single_click = true
+key_down = Tab
+key_up = ISO_Left_Tab
+key_forward = Up
+key_backward = Down
+content_halign = center
+key_expand = Right
