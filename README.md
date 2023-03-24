@@ -79,7 +79,7 @@ Use ``SUPER + Q`` to open a terminal.
 Copy the config files from ``blue/.config``.
 
 waybar + hyprland has weird on-click behaviour.
-
+(Fixed config for wofi)
 Install the following:
 ```
 sudo pacman -S network-manager-applet nm-connection-editor bluez bluez-utils blueman polkit-kde-agent mako wofi bottom
