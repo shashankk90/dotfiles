@@ -2,7 +2,7 @@ colors = colors
 mode = drun
 width = 600
 prompt = 
-normal_window = false
+normal_window = true
 hide_scroll = true
 matching = contains
 insensitive = true
@@ -12,5 +12,5 @@ key_down = Tab
 key_up = ISO_Left_Tab
 key_forward = Up
 key_backward = Down
-content_halign = center
-key_expand = Right
+key_expabottom
+layer = overlay
