@@ -78,10 +78,12 @@ Use ``SUPER + Q`` to open a terminal.
 ## blue
 Copy the config files from ``blue/.config``.
 
+waybar + hyprland has weird on-click behaviour.
+
 Install the following:
 ```
 sudo pacman -S network-manager-applet nm-connection-editor bluez bluez-utils blueman polkit-kde-agent mako wofi bottom
-yay -S waybar-git hyprpaper-git wlogout
+yay -S waybar-hyprland-git hyprpaper-git wlogout
 ```
 Enable bluetooth if its not enabled.
 
