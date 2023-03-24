@@ -98,3 +98,8 @@ Edit ``/etc/greetd/config.toml`` :
 [default_session]
 command = "tuigreet --cmd hyprland"
 ```
+
+## additional
+```
+sudo pacman -S ntfs-3g thunar
+```
