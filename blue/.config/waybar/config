@@ -13,8 +13,8 @@
   // pulseaudio#microphone
   "custom/arch-pill": {
     "format": "",
-    "on-click": "wofi --show drun",
-    "on-click-right": "wlogout",
+    "on-click": "killall wofi || wofi --show drun",
+    "on-click-right": "killall wlogout || wlogout",
     // on mid click maybe theme switch
     "tooltip": false
   },
