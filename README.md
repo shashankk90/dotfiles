@@ -82,7 +82,7 @@ waybar + hyprland has weird on-click behaviour.
 (Fixed config for wofi)
 Install the following:
 ```
-sudo pacman -S network-manager-applet nm-connection-editor bluez bluez-utils blueman polkit-kde-agent mako wofi bottom
+sudo pacman -S network-manager-applet nm-connection-editor bluez bluez-utils blueman polkit-kde-agent mako wofi bottom brightnessctl
 yay -S waybar-hyprland-git hyprpaper-git wlogout
 ```
 Enable bluetooth if its not enabled.
