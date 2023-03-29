@@ -103,3 +103,10 @@ command = "tuigreet --cmd hyprland"
 ```
 sudo pacman -S ntfs-3g thunar
 ```
+
+### screenshare
+
+```
+yay -S xdg-desktop-portal-hyprland-git
+```
+ paru has an issue with searching for implementations in the AUR, and will falsely ask you to install an additional implementation. Installing any other than -gtk alongside XDPH will cause it to most likely not work.
