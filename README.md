@@ -101,7 +101,18 @@ command = "tuigreet --cmd hyprland"
 
 ## additional
 ```
-sudo pacman -S ntfs-3g thunar
+sudo pacman -S ntfs-3g
+```
+
+### thunar file manager
+```
+sudo pacman -S thunar gvfs xarchiver thunar-media-tags-plugin thunar-volman
+```
+For automatic mounting of removable devices use ``thunar --deamon``.
+
+Edit ``~/.config/fce/helpers.rc``:
+```
+TerminalEmulator=kitty
 ```
 
 ### screenshare
