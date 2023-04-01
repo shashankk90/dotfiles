@@ -83,7 +83,7 @@ waybar + hyprland has weird on-click behaviour.
 Install the following:
 ```
 sudo pacman -S network-manager-applet nm-connection-editor bluez bluez-utils blueman polkit-kde-agent mako wofi bottom brightnessctl
-yay -S waybar-hyprland-git hyprpaper-git wlogout
+yay -S waybar-hyprland-git hyprpaper-git wlogout swaylock-effects
 ```
 Enable bluetooth if its not enabled.
 
