@@ -5,19 +5,22 @@
     "custom/arch-pill",
     "cpu",
     "memory",
-    "battery"
+    "battery",
+    "wlr/workspaces"
   ],
   "modules-center": ["custom/playerctl"],
   "modules-right": ["tray", "network","bluetooth", "backlight", "pulseaudio#audio","pulseaudio#microphone", "clock"],
-  // Modules configuration
-  // pulseaudio#microphone
   "custom/arch-pill": {
     "format": "",
     "on-click": "killall wofi || wofi --show drun",
     "on-click-right": "killall wlogout || wlogout",
-    // on mid click maybe theme switch
     "tooltip": false
   },
+"wlr/workspaces": {
+  "format": "{name}",
+  "on-click": "activate",
+  "sort-by-number": true,
+},
   "bluetooth": {
     "format": " {status}",
     "format-connected": " {device_alias}",
@@ -51,7 +54,7 @@
   "battery": {
     "states": {
       "good": 95,
-      "warning": 70,
+      "warning": 40,
       "critical": 15
     },
     "format": "{icon} {capacity}%",
