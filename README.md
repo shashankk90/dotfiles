@@ -122,10 +122,12 @@ yay -S xdg-desktop-portal-hyprland-git
 ```
  paru has an issue with searching for implementations in the AUR, and will falsely ask you to install an additional implementation. Installing any other than -gtk alongside XDPH will cause it to most likely not work.
  
- ### zsh + powerlevel10k
+ ### ohmyzsh + powerlevel10k
  
  ```
- yay -S --noconfirm zsh-theme-powerlevel10k-git
-echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
-chsh -s $(which zsh)
+ sudo pacman -S zsh
+ sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 ```
+
+Set ``ZSH_THEME="powerlevel10k/powerlevel10k"`` in ``~/.zshrc``.
