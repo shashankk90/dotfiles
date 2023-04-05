@@ -132,7 +132,7 @@ yay -S xdg-desktop-portal-hyprland-git
 
 Set ``ZSH_THEME="powerlevel10k/powerlevel10k"`` in ``~/.zshrc``.
 
-### lunarvim
+### nvchad
 
 ```
 sudo pacman -S neovim git make pip python cargo wget
