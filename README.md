@@ -1,5 +1,4 @@
 # dotfiles
-mah dotfiles
 
 
 ## archinstall
